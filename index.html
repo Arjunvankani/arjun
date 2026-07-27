@@ -4,22 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arjun Vankani — Agentic AI Engineer</title>
+   <!--- Github ribbon ----------->
+            <a href="https://github.com/Arjunvankani/" class="github-corner" aria-label="View source on GitHub">
+               <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+                  <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+                  <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+                  <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+               </svg>
+            </a>
+  
 <meta name="description" content="Arjun Vankani — AI Engineer specialized in Agentic AI, multi-agent systems, RAG, and LLM engineering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
+
+  <style>
   :root{
-    --bg:#F7F9FA;
-    --surface:#FFFFFF;
-    --surface-2:#EFF3F4;
-    --line:#DDE4E7;
-    --line-soft:#E7ECEE;
-    --text:#0F1A22;
-    --muted:#5B6B76;
-    --muted-2:#8B9BA5;
-    --teal:#0E8F82;
-    --teal-dim:#0B6D63;
-    --amber:#B8720F;
+    --bg:#0A0F14;
+    --surface:#101823;
+    --surface-2:#0D1420;
+    --line:#1D2A38;
+    --line-soft:#16202C;
+    --text:#E7EDF3;
+    --muted:#7C8FA3;
+    --muted-2:#54677A;
+    --teal:#2DD4BF;
+    --teal-dim:#1B7F73;
+    --amber:#F5B85C;
     --radius:10px;
     --mono: 'JetBrains Mono', monospace;
     --display: 'Space Grotesk', sans-serif;
@@ -92,16 +102,6 @@
     font-family:var(--mono); font-size:13px; color:var(--teal);
     display:flex; align-items:center; gap:10px; margin-bottom:22px;
   }
-  .avatar-chip{
-    width:76px; height:76px; border-radius:50%; overflow:hidden; margin-bottom:22px;
-    border:2px solid var(--teal-dim); box-shadow:0 0 0 4px var(--surface), 0 0 22px rgba(45,212,191,0.18);
-  }
-  .avatar-chip img{width:100%; height:100%; object-fit:cover; display:block;}
-  .avatar-fallback{
-    display:none; width:100%; height:100%; align-items:center; justify-content:center;
-    font-family:var(--display); font-weight:700; font-size:24px; color:var(--teal);
-    background:var(--surface-2);
-  }
   .eyebrow .bracket{color:var(--muted-2);}
   .cursor{display:inline-block; width:8px; height:16px; background:var(--teal); margin-left:2px; animation:blink 1s steps(1) infinite; vertical-align:-3px;}
   @keyframes blink{50%{opacity:0;}}
@@ -147,7 +147,7 @@
   .node-label{font-family:var(--mono); font-size:10.5px; fill:var(--muted); letter-spacing:0.02em;}
   .node-label-hi{fill:var(--teal);}
   .node-circle{fill:var(--surface-2); stroke:var(--line); stroke-width:1.4;}
-  .node-circle.core{stroke:var(--teal); fill:#E4F6F3;}
+  .node-circle.core{stroke:var(--teal); fill:#0E2320;}
   .edge{stroke:var(--line); stroke-width:1.3; fill:none;}
   .pulse{
     fill:var(--teal); r:3;
@@ -301,33 +301,6 @@
   .social-row a:hover{color:var(--teal); border-color:var(--teal-dim);}
   .foot-note{font-family:var(--mono); font-size:11.5px; color:var(--muted-2); text-align:center;}
   .foot-note .cur{color:var(--teal);}
-
-  /* ---------- MESSAGE BOX ---------- */  .foot-note{font-family:var(--mono); font-size:11.5px; color:var(--muted-2); text-align:center;}
-  .foot-note .cur{color:var(--teal);}
-
-  /* ---------- MESSAGE BOX ---------- */
-  .msg-box{
-    background:var(--surface); border:1px solid var(--line); border-radius:12px;
-    padding:0 0 20px; margin-bottom:36px; text-align:left; overflow:hidden;
-  }
-  .msg-head{
-    font-family:var(--mono); font-size:12px; color:var(--muted);
-    background:var(--surface-2); border-bottom:1px solid var(--line);
-    padding:12px 20px; display:flex; align-items:center; gap:8px;
-  }
-  .msg-dot{width:7px; height:7px; border-radius:50%; background:var(--amber);}
-  .msg-row{padding:16px 20px 0;}
-  .msg-row.two{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-  @media (max-width:560px){ .msg-row.two{grid-template-columns:1fr;} }
-  .msg-box input, .msg-box textarea{
-    width:100%; background:var(--surface-2); border:1px solid var(--line);
-    border-radius:7px; padding:11px 14px; font-family:var(--mono); font-size:13.5px;
-    color:var(--text); resize:vertical;
-  }
-  .msg-box textarea{ margin:16px 20px 18px; width:calc(100% - 40px); }
-  .msg-box input::placeholder, .msg-box textarea::placeholder{color:var(--muted-2);}
-  .msg-box input:focus, .msg-box textarea:focus{outline:none; border-color:var(--teal-dim);}
-  .msg-send{margin:0 20px; cursor:pointer; border:none;}
 </style>
 </head>
 <body>
@@ -351,10 +324,6 @@
   <!-- HERO -->
   <section class="hero wrap">
     <div>
-      <div class="avatar-chip">
-        <img src="arjun.jpg" alt="Arjun Vankani" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="avatar-fallback">AV</div>
-      </div>
       <div class="eyebrow"><span class="bracket">&gt;</span> agent_router.initialize()<span class="cursor"></span></div>
       <h1 class="name">Arjun<br><span class="last">Vankani</span></h1>
       <div class="role-line"><span class="typed" id="typed"></span><span class="bar"></span></div>
@@ -377,7 +346,7 @@
         <path id="e3" class="edge" d="M170,130 C210,100 250,80 285,55"/>
         <path id="e4" class="edge" d="M170,130 C140,165 100,190 65,210"/>
         <path id="e5" class="edge" d="M170,130 C200,170 235,195 275,215"/>
-
+        
         <!-- traveling pulses -->
         <circle class="pulse" style="--path:path('M170,130 C130,110 90,80 60,55'); animation-delay:0s"/>
         <circle class="pulse" style="--path:path('M170,130 C150,95 145,55 150,30'); animation-delay:0.5s"/>
@@ -421,6 +390,19 @@
       <h2 class="section-title">About</h2>
       <div class="section-line"></div>
     </div>
+
+     <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+							  <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+								<div class="timeline-entry-inner">
+									<div class="timeline-icon color-1">
+										<!-- Add an image here with a class for styling -->
+										<img class="responsive-image" src="ii.jpg" alt="Hilights">
+									</div>
+									
+								</div>
+							</article>
+							<br>
+       
     <div class="about-grid">
       <div class="about-text">
         <p>
@@ -720,22 +702,11 @@
   <div class="wrap contact-inner">
     <div class="eyebrow"><span class="bracket">&gt;</span> awaiting_connection<span class="cursor"></span></div>
     <h2 class="contact-title">Let's build something agentic.</h2>
-    <p class="contact-sub">Open to Agentic AI, AI Engineer, ML, and NLP roles. Send a message directly below.</p>
-
-    <form class="msg-box" id="msgForm">
-      <div class="msg-head"><span class="msg-dot"></span>compose_message.txt</div>
-      <div class="msg-row two">
-        <input type="text" name="name" placeholder="your_name" required>
-        <input type="email" name="email" placeholder="your_email@domain.com" required>
-      </div>
-      <textarea name="message" placeholder="> type your message to arjun..." rows="4" required></textarea>
-      <button type="submit" class="btn btn-primary msg-send">Send message →</button>
-    </form>
-
+    <p class="contact-sub">Open to Agentic AI, AI Engineer, ML, and NLP roles. Reach out below.</p>
     <div class="social-row">
       <a href="mailto:vankaniarjun0103@gmail.com">email</a>
-      <a href="https://www.linkedin.com/in/arjun-vankani/" target="_blank" rel="noopener">linkedin</a>
-      <a href="https://github.com/Arjunvankani/" target="_blank" rel="noopener">github</a>
+      <a href="#">linkedin</a>
+      <a href="#">github</a>
       <a href="#">resume.pdf</a>
     </div>
     <div class="foot-note">© 2026 Arjun Vankani <span class="cur">·</span> built with intent, routed with agents</div>
@@ -743,14 +714,24 @@
 </footer>
 
 <script>
-  document.getElementById('msgForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const f = e.target;
-    const name = f.name.value, email = f.email.value, message = f.message.value;
-    const subject = encodeURIComponent('Portfolio message from ' + name);
-    const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-    window.location.href = 'mailto:vankaniarjun0103@gmail.com?subject=' + subject + '&body=' + body;
-  });
+  // typewriter for role line
+  const roles = ["Agentic AI Engineer", "LLM & RAG Engineer", "Computer Vision Researcher", "Multi-Agent Systems Builder"];
+  const el = document.getElementById('typed');
+  let ri = 0, ci = 0, deleting = false;
+  function tick(){
+    const word = roles[ri];
+    if(!deleting){
+      ci++;
+      el.textContent = word.slice(0, ci);
+      if(ci === word.length){ deleting = true; setTimeout(tick, 1400); return; }
+    } else {
+      ci--;
+      el.textContent = word.slice(0, ci);
+      if(ci === 0){ deleting = false; ri = (ri+1) % roles.length; }
+    }
+    setTimeout(tick, deleting ? 35 : 65);
+  }
+  tick();
 </script>
 </body>
 </html>
