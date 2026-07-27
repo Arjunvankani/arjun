@@ -9,17 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0A0F14;
-    --surface:#101823;
-    --surface-2:#0D1420;
-    --line:#1D2A38;
-    --line-soft:#16202C;
-    --text:#E7EDF3;
-    --muted:#7C8FA3;
-    --muted-2:#54677A;
-    --teal:#2DD4BF;
-    --teal-dim:#1B7F73;
-    --amber:#F5B85C;
+    --bg:#F7F9FA;
+    --surface:#FFFFFF;
+    --surface-2:#EFF3F4;
+    --line:#DDE4E7;
+    --line-soft:#E7ECEE;
+    --text:#0F1A22;
+    --muted:#5B6B76;
+    --muted-2:#8B9BA5;
+    --teal:#0E8F82;
+    --teal-dim:#0B6D63;
+    --amber:#B8720F;
     --radius:10px;
     --mono: 'JetBrains Mono', monospace;
     --display: 'Space Grotesk', sans-serif;
@@ -92,6 +92,16 @@
     font-family:var(--mono); font-size:13px; color:var(--teal);
     display:flex; align-items:center; gap:10px; margin-bottom:22px;
   }
+  .avatar-chip{
+    width:76px; height:76px; border-radius:50%; overflow:hidden; margin-bottom:22px;
+    border:2px solid var(--teal-dim); box-shadow:0 0 0 4px var(--surface), 0 0 22px rgba(45,212,191,0.18);
+  }
+  .avatar-chip img{width:100%; height:100%; object-fit:cover; display:block;}
+  .avatar-fallback{
+    display:none; width:100%; height:100%; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:24px; color:var(--teal);
+    background:var(--surface-2);
+  }
   .eyebrow .bracket{color:var(--muted-2);}
   .cursor{display:inline-block; width:8px; height:16px; background:var(--teal); margin-left:2px; animation:blink 1s steps(1) infinite; vertical-align:-3px;}
   @keyframes blink{50%{opacity:0;}}
@@ -137,7 +147,7 @@
   .node-label{font-family:var(--mono); font-size:10.5px; fill:var(--muted); letter-spacing:0.02em;}
   .node-label-hi{fill:var(--teal);}
   .node-circle{fill:var(--surface-2); stroke:var(--line); stroke-width:1.4;}
-  .node-circle.core{stroke:var(--teal); fill:#0E2320;}
+  .node-circle.core{stroke:var(--teal); fill:#E4F6F3;}
   .edge{stroke:var(--line); stroke-width:1.3; fill:none;}
   .pulse{
     fill:var(--teal); r:3;
@@ -291,6 +301,33 @@
   .social-row a:hover{color:var(--teal); border-color:var(--teal-dim);}
   .foot-note{font-family:var(--mono); font-size:11.5px; color:var(--muted-2); text-align:center;}
   .foot-note .cur{color:var(--teal);}
+
+  /* ---------- MESSAGE BOX ---------- */  .foot-note{font-family:var(--mono); font-size:11.5px; color:var(--muted-2); text-align:center;}
+  .foot-note .cur{color:var(--teal);}
+
+  /* ---------- MESSAGE BOX ---------- */
+  .msg-box{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:0 0 20px; margin-bottom:36px; text-align:left; overflow:hidden;
+  }
+  .msg-head{
+    font-family:var(--mono); font-size:12px; color:var(--muted);
+    background:var(--surface-2); border-bottom:1px solid var(--line);
+    padding:12px 20px; display:flex; align-items:center; gap:8px;
+  }
+  .msg-dot{width:7px; height:7px; border-radius:50%; background:var(--amber);}
+  .msg-row{padding:16px 20px 0;}
+  .msg-row.two{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media (max-width:560px){ .msg-row.two{grid-template-columns:1fr;} }
+  .msg-box input, .msg-box textarea{
+    width:100%; background:var(--surface-2); border:1px solid var(--line);
+    border-radius:7px; padding:11px 14px; font-family:var(--mono); font-size:13.5px;
+    color:var(--text); resize:vertical;
+  }
+  .msg-box textarea{ margin:16px 20px 18px; width:calc(100% - 40px); }
+  .msg-box input::placeholder, .msg-box textarea::placeholder{color:var(--muted-2);}
+  .msg-box input:focus, .msg-box textarea:focus{outline:none; border-color:var(--teal-dim);}
+  .msg-send{margin:0 20px; cursor:pointer; border:none;}
 </style>
 </head>
 <body>
@@ -314,6 +351,10 @@
   <!-- HERO -->
   <section class="hero wrap">
     <div>
+      <div class="avatar-chip">
+        <img src="arjun.jpg" alt="Arjun Vankani" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="avatar-fallback">AV</div>
+      </div>
       <div class="eyebrow"><span class="bracket">&gt;</span> agent_router.initialize()<span class="cursor"></span></div>
       <h1 class="name">Arjun<br><span class="last">Vankani</span></h1>
       <div class="role-line"><span class="typed" id="typed"></span><span class="bar"></span></div>
@@ -679,11 +720,22 @@
   <div class="wrap contact-inner">
     <div class="eyebrow"><span class="bracket">&gt;</span> awaiting_connection<span class="cursor"></span></div>
     <h2 class="contact-title">Let's build something agentic.</h2>
-    <p class="contact-sub">Open to Agentic AI, AI Engineer, ML, and NLP roles. Reach out below.</p>
+    <p class="contact-sub">Open to Agentic AI, AI Engineer, ML, and NLP roles. Send a message directly below.</p>
+
+    <form class="msg-box" id="msgForm">
+      <div class="msg-head"><span class="msg-dot"></span>compose_message.txt</div>
+      <div class="msg-row two">
+        <input type="text" name="name" placeholder="your_name" required>
+        <input type="email" name="email" placeholder="your_email@domain.com" required>
+      </div>
+      <textarea name="message" placeholder="> type your message to arjun..." rows="4" required></textarea>
+      <button type="submit" class="btn btn-primary msg-send">Send message →</button>
+    </form>
+
     <div class="social-row">
       <a href="mailto:vankaniarjun0103@gmail.com">email</a>
-      <a href="#">linkedin</a>
-      <a href="#">github</a>
+      <a href="https://www.linkedin.com/in/arjun-vankani/" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://github.com/Arjunvankani/" target="_blank" rel="noopener">github</a>
       <a href="#">resume.pdf</a>
     </div>
     <div class="foot-note">© 2026 Arjun Vankani <span class="cur">·</span> built with intent, routed with agents</div>
@@ -691,24 +743,14 @@
 </footer>
 
 <script>
-  // typewriter for role line
-  const roles = ["Agentic AI Engineer", "LLM & RAG Engineer", "Computer Vision Researcher", "Multi-Agent Systems Builder"];
-  const el = document.getElementById('typed');
-  let ri = 0, ci = 0, deleting = false;
-  function tick(){
-    const word = roles[ri];
-    if(!deleting){
-      ci++;
-      el.textContent = word.slice(0, ci);
-      if(ci === word.length){ deleting = true; setTimeout(tick, 1400); return; }
-    } else {
-      ci--;
-      el.textContent = word.slice(0, ci);
-      if(ci === 0){ deleting = false; ri = (ri+1) % roles.length; }
-    }
-    setTimeout(tick, deleting ? 35 : 65);
-  }
-  tick();
+  document.getElementById('msgForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const f = e.target;
+    const name = f.name.value, email = f.email.value, message = f.message.value;
+    const subject = encodeURIComponent('Portfolio message from ' + name);
+    const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+    window.location.href = 'mailto:vankaniarjun0103@gmail.com?subject=' + subject + '&body=' + body;
+  });
 </script>
 </body>
 </html>
